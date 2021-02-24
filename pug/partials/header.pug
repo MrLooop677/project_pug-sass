@@ -1,0 +1,17 @@
+section(class="header")
+    .container  
+        .logo
+            h1 Composition
+            p Free PDS Website Template
+            button(class="the-toggler")  
+                span 
+                span 
+                span 
+        ul(class="navbar")    
+            each val in ["HomePage","StyleDemo","fullWidth","DropDown","linkText"]
+                li 
+                    a(href="#")=val  
+        select(class="sel" onchange="se(this.value)")
+                option Select Language
+                option Eng
+                option Ar             

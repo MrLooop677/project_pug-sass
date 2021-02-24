@@ -1,0 +1,141 @@
+// start slider
+.slider {
+    blockquote {
+        width: 80%;
+        margin: 30px auto;
+        font: {
+            size: 20px;
+            style: italic;
+            family: Verdana, Geneva, Tahoma, sans-serif;
+            weight: bold;
+        }
+        text-align: center;
+        line-height: 1.7;
+        color: #9c9c9c;
+    }
+    img {
+        max-width: 100%;
+    }
+    .indicators {
+        text-align: center;
+        li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            background-color: $graycolor;
+            border-radius: 50%;
+            border: 3px solid $graycolor;
+            transition: all .3s ease-in-out;
+            &.active,
+            &:hover {
+                background-color: #fff;
+                border-color: #333;
+            }
+        }
+    }
+}
+
+// end slider
+// start ourservices
+.servive-box {
+    @media #{$minMedium} {
+        width: calc(100%/3);
+        float: $float-left;
+        &:not(:last-of-type) {
+            padding-right: 20px;
+        }
+    }
+    @media #{$maxMobile} {
+        width: 100%;
+        float: none;
+        .svg-inline--fa {
+            display: block;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+    }
+    .service-title {
+        color: #666;
+        .svg-inline--fa {
+            position: relative;
+            top: 4px;
+            font-size: 35px;
+        }
+    }
+    .service-desc {
+        color: #777;
+        line-height: 1.5;
+    }
+    .link {
+        color: $redcolor;
+        text-decoration: none;
+    }
+}
+
+// end ourservices
+// start ourplayer
+.ourplayers {
+    .player-box {
+        float: $float-left;
+        padding-right: 20px;
+        @media #{$maxMobile} {
+            width: 100%;
+            float: none;
+        }
+        @media #{$minSmall} {
+            width: calc(100%/2);
+            margin-bottom: 30px;
+        }
+        @media #{$minMedium} {
+            width: calc(100%/5);
+        }
+        &:last-child {
+            @media #{$minSmall} and #{$maxSmall} {
+                margin: auto;
+                float: none;
+            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+        }
+        .player-title {
+            color: #666;
+            font-weight: normal;
+            span.head {
+                font-weight: bold;
+            }
+        }
+        .player-desc {
+            color: #777;
+            line-height: 1.5;
+        }
+        .link {
+            color: $redcolor;
+            text-decoration: none;
+        }
+    }
+}
+
+// end our player
+// start lorem ipsum
+.loremipsum {
+    .lorembox {
+        margin-bottom: 30px;
+        @media #{$minSmall} {
+            float: $float-left;
+            width: calc(94%/3);
+            margin-bottom: 0;
+            &:not(:last-of-type) {
+                margin-right: 20px;
+            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
+
+// end lorem ipsum

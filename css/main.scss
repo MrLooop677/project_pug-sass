@@ -1,0 +1,38 @@
+@import "sass/helpers/variables";
+@import "sass/helpers/mixin";
+@import "sass/layout/grid";
+@import "sass/components/headings";
+@import "sass/pages/globalpage";
+@import "sass/layout/header";
+@import "sass/pages/Home";
+@import "sass/components/buttons";
+@import "sass/layout/footer";
+// overlay
+.product {
+    width: 300px;
+    height: 150px;
+    margin: 50px auto;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    padding: 10px;
+    position: relative;
+    // .overlay {
+    //     @include overlay;
+    //     background-color: rgba($redcolor, .3);
+    //     color: #fff;
+    // }
+    @include prefixer(box-shadow, 10px 10px 10px #ccc, webkit o ms moz);
+    @include prefixer(animation, fadeIn 2s infinite linear, webkit o ms moz)
+}
+
+@include kFrame(fadeIn) {
+    0% {
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}

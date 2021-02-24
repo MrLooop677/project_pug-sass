@@ -1,0 +1,41 @@
+@mixin media {
+    @media (min-width: $minSmall) {
+        @content
+    }
+}
+
+// overlay
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// prifixes
+@mixin prefixer($prop, $value, $prefixes:()) {
+    @each $prefixe in $prefixes {
+        #{"-"+$prefixe+"-"+$prop}: $value;
+    }
+    #{$prop}:$value;
+}
+
+// animation
+@mixin kFrame($name) {
+    @keyframes #{$name} {
+        @content
+    }
+    @-moz-keyframes #{$name} {
+        @content
+    }
+    @-o-keyframes #{$name} {
+        @content
+    }
+    @-ms-keyframes #{$name} {
+        @content
+    }
+    @keyframes #{$name} {
+        @content
+    }
+}

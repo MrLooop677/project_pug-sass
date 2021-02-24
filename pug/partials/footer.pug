@@ -1,0 +1,38 @@
+//- start footer
+.footer 
+    .container
+        div(class="gallary text-center-sm")
+            h3.section-title Latest From Blog
+            -for(var i=0 ;i<2 ; i++){
+                .img-box
+                    if i==1
+                        img(src="img/slide (9).png", alt="")
+                    else
+                        img(src="img/slide (8).png", alt="")    
+                    .text 
+                        h4 Download the free app
+                        p Send unlimited free texts and make WiFi calls from a free phone number. Download
+            -}
+        div(class="info text-center-sm")
+            h3.section-title Latest From Blog
+            ul
+                each val in ["company name:","street name number","tow","postal code","scale"]
+                    li= val
+                
+                li Email:
+                    span  EslamMahmoud@gmail.com
+            h4 working Hours
+            p Monday - friday 08:00 - 17:00        
+                
+        div(class="contact text-center-sm")
+            h3.section-title Contact Us
+            form(action="")
+                input(type="text",placeholder="Name")
+                input(type="Email",placeholder="Email")
+                textarea(placeholder="Message...")
+                input(class="main-button", type="submit", value="submit")
+        .clearfix
+        .copyright
+            div(class="text text-center-sm")  All Right Recrvied &copy; 2021
+            div(class="author text-center-sm") Designed by Eslam Mahmoud
+//- end footer

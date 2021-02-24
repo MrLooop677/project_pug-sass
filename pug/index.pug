@@ -1,0 +1,72 @@
+doctype html
+html()
+    include ./helpers/mixin
+    
+    head
+        include ./partials/head
+        
+    body
+        include ./partials/header.pug
+        //-satrt slider 
+        .slider
+            .container
+                blockquote "Call and message your friends with a real phone number - no phone service required! SMS text any US or Canada number or call"
+                |
+                |
+                img(src="img/slide (1).png", alt="") 
+                ul(class="indicators")
+                    li(class="active")
+                    li
+                    li
+                    li
+        //-end slider 
+
+        //-satrt ourservices
+        .ourservicse
+            .container
+                .headwithborder 
+                    h2 Our Services
+                +boxservices("fas fa-home","testing title")
+                +boxservices("fas fa-users","testing title")
+                +boxservices("fas fa-cogs","testing title")
+        .clearfix
+        //-end ourservices
+
+        //- start ourplayers
+        .ourplayers
+            .container
+                .headwithborder 
+                    h2 Our Players
+                +boxplayer("img/slide (3).png")
+                +boxplayer("img/slide (4).png")
+                +boxplayer("img/slide (5).png")
+                +boxplayer("img/slide (6).png")
+                +boxplayer("img/slide (7).png")
+        .clearfix
+        //- start ourplayers
+
+        //- start lorem ipsum
+        .loremipsum
+            .container
+                .headwithborder 
+                    h2 lorem ipsum
+                .lorembox
+                    img(src="img/slide (4).png" alt="")
+                .lorembox
+                    img(src="img/slide (1).png" alt="")
+                .lorembox
+                    img(src="img/slide (7).png" alt="")
+
+        .clearfix
+        //- end lorem ipsum
+        
+        include ./partials/footer.pug
+        script(src="js/all.min.js")
+        script(src="js/jquery-3.5.1.min.js")
+        script(src="js/main.js") 
+        
+
+        
+        
+    
+     
